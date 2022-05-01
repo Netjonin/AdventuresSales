@@ -1,0 +1,36 @@
+﻿@using AdventureWorksSales.Web.Models;
+@model IEnumerable<ProductCategory>
+@{
+    ViewBag.Title = "Product Categories";
+}
+
+<h2>Product Categories</h2>
+
+<div>
+    <button class="btn btn-dark" style="float:right">Add</button>
+    <a>Edit</a>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rowguid</th>
+                <th>ModifiedDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in @Model)
+            {
+                <tr>
+                    <td>@category.Name</td>
+                    <td>@category.Rowguid</td>
+                    <td>@category.ModifiedDate</td>
+                    <td><a>Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
